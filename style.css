@@ -7,17 +7,18 @@ body{
 #container
 {
     display: flex;
-    height: 430px;
-    width: 440px;
+    height: 960px;
+    width: 960px;
     flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    border: 1px;
-
+    border: solid;
+    flex-direction: row;
 }
 
-.grid{
-    height: 25px;
-    width: 25px;
-    border: solid 1px black;
+
+.button{
+
+    margin-bottom: 20px;
+    width: 80px;
+    height: 40px;
+    font-size: 15px;
 }
