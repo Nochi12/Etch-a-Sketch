@@ -1,6 +1,6 @@
 const container = document.querySelector("#container")
 const button = document.querySelector(".button")
-
+const button2 = document.querySelector(".button2")
 createGrid(16)
 function createGrid(divs){
     
@@ -16,7 +16,12 @@ for(let i = 0; i < numGrid ; i++)
     grids.addEventListener("mouseover", e => {
         e.target.style.backgroundColor = "black";
     })
-    
+    button2.addEventListener("click",() =>{
+
+        grids.addEventListener("mouseover", e=> {
+            e.target.style.backgroundColor = randomRGB();
+        })
+    })
     container.appendChild(grids)
 }
 }
@@ -40,5 +45,13 @@ return createGrid(userInput)
 
 })
 
+function randomRGB()
+{
+    const red = Math.floor(Math.random() * 256 ) + 1;
+    const green = Math.floor(Math.random() * 256 )+ 1;
+    const blue = Math.floor(Math.random() * 256 ) + 1;
 
+    const rgbRandom = `rgb(`+ red + `,` + green + `,` + blue + `)`;
+    return rgbRandom 
+}   
 
